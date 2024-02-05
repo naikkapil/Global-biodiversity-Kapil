@@ -48,11 +48,26 @@ server <- function(input, output) {
   
   ## Map output
   output$map <- renderLeaflet({
+    # Map rendering using leaflet()
+    data <- filteredData()  # Get the filtered data
     
+    leaflet(data) %>% 
+      addTiles() %>%  # Add default OpenStreetMap map tiles
+      addMarkers(~longitudeDecimal, ~latitudeDecimal, popup = ~vernacularName)
   })
   
   # Timeline output
   output$timeline <- renderPlot({
+    # Plotting logic using ggplot2
+    
+    data <- filteredData()
+    data$eventDate <- as.Date(data$eventDate)
+    
+    ggplot(data, aes(x = eventDate)) +
+      geom_histogram(binwidth = 30, fill = "blue", color = "black") +
+      labs(x = "Date of Observation", y = "Number of Observations") +
+      theme_minimal() +
+      ggtitle(paste("Observations Over Time for", input$speciesName))
     
   })
 }
