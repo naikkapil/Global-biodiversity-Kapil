@@ -24,6 +24,7 @@ ui <- dashboardPage(
 )
 
 server <- function(input, output) {
+  observations <- read.csv("occurence_poland.csv")
   ## Data filtering based on search
   filteredData <- reactive({
     
