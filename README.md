@@ -1,5 +1,7 @@
 Species Observation Dashboard
+
 Author -Kapil Naik
+
 **Overview
 This project focuses on analyzing and visualizing subsetted occurrence data specific to Poland. By default, the app displays data for the Slow Worm species. I've employed various tools and packages to manage dependencies, create visualizations, ensure code quality, and provide user-friendly search functionalities.
 
