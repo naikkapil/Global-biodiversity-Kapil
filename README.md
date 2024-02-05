@@ -2,6 +2,8 @@ Species Observation Dashboard
 
 Author -Kapil Naik
 
+Application url- https://kapilnaik.shinyapps.io/global-biodiversity-kapil/
+
 **Overview
 --This project focuses on analyzing and visualizing subsetted occurrence data specific to Poland. By default, the app displays data for the Slow Worm species. I've employed various tools and packages to manage dependencies, create visualizations, ensure code quality, and provide user-friendly search functionalities.
 
@@ -17,6 +19,8 @@ Author -Kapil Naik
 --Testing with shinytest2: To ensure the reliability and integrity of my application, I have used shinytest2 for creating test cases. This helps in automatically testing my Shiny applications, ensuring that they function as expected.
 
 --Search Functionality: I've added a search functionality that allows users to search for a species either by its vernacular name or scientific name, such as Paris quadrifolia, Anguis fragilis, Polygonatum multiflorum, Asarum europaeum, Euphorbia cyparissias, Solomon's-seal, European Wild Ginger, Cypress Spurge, Marsh-marigold, etc. The occurrence of the species will be visible on the map, and clicking on a marker will display locality and species name details. Users can also view the occurrence timeline in a graph located below the map.
+
+--Deployed Application: The dashboard has been deployed on shinyapps.io and is accessible at https://kapilnaik.shinyapps.io/global-biodiversity-kapil/. This allows users to interact with the dashboard directly from the web without the need to run the application locally.
 
 **Installation
 To install and run the Species Observation Dashboard:
