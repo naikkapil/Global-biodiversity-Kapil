@@ -12,24 +12,25 @@ ui <- dashboardPage(
   dashboardSidebar(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-      textInput("speciesName", "Enter Species Name"),
-      actionButton("search", "Search")
+      textInput("speciesName", "Enter Species Name")
+      #actionButton("search", "Search")
       ## Additional filters or options
     )
   ),
   dashboardBody(
-    tags$head(
-      tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
-    ),
     tabItems(
       tabItem(tabName = "dashboard",
               fluidRow(
-                box(leafletOutput("map"), width = 6),
-                box(plotOutput("timeline"), width = 6)
+                box(leafletOutput("map"), width = 12)
+              ),
+              fluidRow(
+                box(plotOutput("timeline"), width = 12)
               )
+              
       )
     )
-  )
+  ),
+  skin = "blue"
 )
 
 server <- function(input, output) {
@@ -42,7 +43,7 @@ server <- function(input, output) {
       subset(observations, vernacularName == input$speciesName | scientificName == input$speciesName)
     } else {
       ## Return a subset for the default view
-      subset(observations, vernacularName == "Herb-Paris" )
+      subset(observations, vernacularName == "Slow Worm" )
     }
   })
   
@@ -52,9 +53,9 @@ server <- function(input, output) {
     data <- filteredData()  # Get the filtered data
     
     leaflet(data) %>%
-      addProviderTiles(providers$CartoDB.Positron) %>%
+      addTiles() %>%
       addCircleMarkers(
-        ~longitudeDecimal, ~latitudeDecimal, popup = ~vernacularName,
+        ~longitudeDecimal, ~latitudeDecimal, popup = ~paste(vernacularName,locality),
         radius = 8, color = "red", stroke = TRUE, fillOpacity = 0.8
       ) %>%
       addScaleBar(position = "bottomleft")
@@ -68,10 +69,15 @@ server <- function(input, output) {
     data$eventDate <- as.Date(data$eventDate)
     
     ggplot(data, aes(x = eventDate)) +
-      geom_histogram(binwidth = 30, fill = "blue", color = "black") +
+      geom_histogram(binwidth = 150, fill = "blue", color = "black") +
       labs(x = "Date of Observation", y = "Number of Observations") +
       theme_minimal() +
+      if(input$speciesName==""){
+        ggtitle("Observations Over Time for Slow Worm")
+      }
+    else{
       ggtitle(paste("Observations Over Time for", input$speciesName))
+    }
     
   })
 }
