@@ -24,8 +24,8 @@ ui <- dashboardPage(
     tabItems(
       tabItem(tabName = "dashboard",
               fluidRow(
-                box(leafletOutput(), width = 6),
-                box(plotOutput(), width = 6)
+                box(leafletOutput("map"), width = 6),
+                box(plotOutput("timeline"), width = 6)
               )
       )
     )
