@@ -27,7 +27,14 @@ server <- function(input, output) {
   observations <- read.csv("occurence_poland.csv")
   ## Data filtering based on search
   filteredData <- reactive({
+    # Filter the data based on the input from the species name search box
     
+    if (input$speciesName != "") {
+      subset(observations, vernacularName == input$speciesName | scientificName == input$speciesName)
+    } else {
+      ## Return a subset for the default view
+      subset(observations, vernacularName == "Herb-Paris" )
+    }
   })
   
   ## Map output
