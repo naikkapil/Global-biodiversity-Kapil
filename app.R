@@ -13,7 +13,6 @@ ui <- dashboardPage(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
       textInput("speciesName", "Enter Species Name")
-      ## Additional filters or options
     )
   ),
   dashboardBody(
