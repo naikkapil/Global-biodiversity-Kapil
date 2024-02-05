@@ -4,7 +4,7 @@ library(leaflet)
 library(ggplot2)
 library(dplyr)
 library(DT)
-
+library(shinytest2)
 
 
 ui <- dashboardPage(
