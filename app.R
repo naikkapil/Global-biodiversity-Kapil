@@ -24,6 +24,20 @@ ui <- dashboardPage(
 )
 
 server <- function(input, output) {
+  ## Data filtering based on search
+  filteredData <- reactive({
+    
+  })
+  
+  ## Map output
+  output$map <- renderLeaflet({
+    
+  })
+  
+  # Timeline output
+  output$timeline <- renderPlot({
+    
+  })
 }
 
 shinyApp(ui = ui, server = server)
