@@ -51,9 +51,13 @@ server <- function(input, output) {
     # Map rendering using leaflet()
     data <- filteredData()  # Get the filtered data
     
-    leaflet(data) %>% 
-      addTiles() %>%  # Add default OpenStreetMap map tiles
-      addMarkers(~longitudeDecimal, ~latitudeDecimal, popup = ~vernacularName)
+    leaflet(data) %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      addCircleMarkers(
+        ~longitudeDecimal, ~latitudeDecimal, popup = ~vernacularName,
+        radius = 8, color = "red", stroke = TRUE, fillOpacity = 0.8
+      ) %>%
+      addScaleBar(position = "bottomleft")
   })
   
   # Timeline output
