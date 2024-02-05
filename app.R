@@ -1,3 +1,12 @@
+library(shiny)
+library(shinydashboard)
+library(leaflet)
+library(ggplot2)
+library(dplyr)
+library(DT)
+
+
+
 ui <- dashboardPage(
   dashboardHeader(title = "Species Observation Dashboard"),
   dashboardSidebar(
