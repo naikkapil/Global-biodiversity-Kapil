@@ -1,11 +1,22 @@
 {
   "input": {
+    "mapModule-map_bounds": {
+      "north": 54.77534585936449,
+      "east": 31.97021484375,
+      "south": 49.38237278700955,
+      "west": 7.690429687500001
+    },
+    "mapModule-map_center": {
+      "lng": 19.830322265625,
+      "lat": 52.16045455774706
+    },
+    "mapModule-map_zoom": 6,
     "sidebarCollapsed": false,
     "sidebarItemExpanded": null,
     "speciesName": ""
   },
   "output": {
-    "map": {
+    "mapModule-map": {
       "x": {
         "options": {
           "crs": {
@@ -435,7 +446,7 @@
         }
       ]
     },
-    "timeline": {
+    "timelineModule-timeline": {
       "src": "[image data hash: 54d2a9e84c66a633afbafa78b6b9e934]",
       "width": 1105,
       "height": 400,
