@@ -7,6 +7,9 @@ Application url- https://kapilnaik.shinyapps.io/global-biodiversity-kapil/
 **Overview
 --This project focuses on analyzing and visualizing subsetted occurrence data specific to Poland. By default, the app displays data for the Slow Worm species. I've employed various tools and packages to manage dependencies, create visualizations, ensure code quality, and provide user-friendly search functionalities.
 
+** Extras
+-- Added Appsilon gif in dashboard header to enhance UI and used Javascript to move application title to to nav bar and Css for styling title.
+
 **Features
 --Subsetted Occurrence Data (Poland) using PySpark: Leveraging the power of PySpark, I have efficiently subsetted occurrence data specifically for the region of Poland. The processed data has been stored in CSV format with the filename occurrence_poland.csv. This approach allows for a more focused and detailed analysis of the data relevant to this geographical area.
 
