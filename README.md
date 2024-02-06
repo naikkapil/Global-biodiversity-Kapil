@@ -1,6 +1,6 @@
 Species Observation Dashboard
 
-Author -Kapil Naik
+Author -Kapil Naik(naik.kapil2016@gmail.com)
 
 Application url- https://kapilnaik.shinyapps.io/global-biodiversity-kapil/
 
@@ -22,16 +22,18 @@ Application url- https://kapilnaik.shinyapps.io/global-biodiversity-kapil/
 
 --Deployed Application: The dashboard has been deployed on shinyapps.io and is accessible at https://kapilnaik.shinyapps.io/global-biodiversity-kapil/. This allows users to interact with the dashboard directly from the web without the need to run the application locally.
 
+-- Application is decomposed into separate shiny modules - ui.r, server.r, map_ui.r, map_server.r, timeline_ui.r and timeline_server.r.
+
 **Installation
 To install and run the Species Observation Dashboard:
 
 Clone the repository to your local machine.
 Install renv if not already installed.
 In the project directory, run renv::restore() to install all necessary dependencies.
-Open app.R and run the app to start the dashboard.
+Open ui.R and run the app to start the dashboard.
 
 **Usage
-To search for species, use the search function within the dashboard to enter either the vernacular name or scientific name. Examples include:
+To search for species, use the search function within the dashboard in sidebar Panel to enter either the vernacular name or scientific name. Examples include:
 
 Paris quadrifolia (Scientific)
 Solomon's-seal (Vernacular)
