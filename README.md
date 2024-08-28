@@ -11,7 +11,7 @@ Application url- https://kapilnaik.shinyapps.io/Global-biodiversity-Kapil_2/
 -- Added Appsilon gif in dashboard header to enhance UI and used Javascript to move application title to to nav bar and Css for styling title.
 
 **Features
---Subsetted Occurrence Data (Poland) using PySpark: Leveraging the power of PySpark, I have efficiently subsetted occurrence data specifically for the region of Poland. The processed data has been stored in CSV format with the filename occurrence_poland.csv. This approach allows for a more focused and detailed analysis of the data relevant to this geographical area.
+--Subsetted Occurrence Data (Poland) using PySpark: Leveraging the power of PySpark, I have efficiently subsetted occurrence data specifically for the region of Poland. The processed data has been stored in CSV format with the filename occurrence_poland.csv. This approach allows for a more focused and detailed analysis of the data relevant to this geographical area.(update - Now data for Poland is readily available at https://www.gbif.org/occurrence/search?country=PL)
 
 --Dependency Management with renv: To manage dependencies, I've utilized renv. This ensures that all necessary R packages and their specific versions are consistently maintained, leading to more reproducible and stable code.
 
