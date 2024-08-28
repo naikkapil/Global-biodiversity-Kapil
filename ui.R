@@ -16,7 +16,8 @@ ui <- dashboardPage(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
       textInput("speciesName", "Enter Species Name")
-      # Additional filters or options
+      p("Ex.:-Anguis fragilis, Rana arvalis"),
+      p(" Caltha palustris, etc.")
     )
   ),
   dashboardBody(
