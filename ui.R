@@ -11,7 +11,7 @@ source("map_ui.R",local = T)
 source("timeline_ui.R",local = T)
 
 ui <- dashboardPage(
-  dashboardHeader(title = tags$a(tags$img(src="appsilon_gif.gif",height="95%"))),
+  dashboardHeader(title = tags$a(tags$img(src="Species.png",height="95%"))),
   dashboardSidebar(
     sidebarMenu(
       menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
