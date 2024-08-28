@@ -2,7 +2,7 @@ Species Observation Dashboard
 
 Author -Kapil Naik(naik.kapil2016@gmail.com)
 
-Application url- https://kapilnaik.shinyapps.io/global-biodiversity-kapil/
+Application url- https://kapilnaik.shinyapps.io/Global-biodiversity-Kapil_2/
 
 **Overview
 --This project focuses on analyzing and visualizing subsetted occurrence data specific to Poland. By default, the app displays data for the Slow Worm species. I've employed various tools and packages to manage dependencies, create visualizations, ensure code quality, and provide user-friendly search functionalities.
@@ -23,7 +23,7 @@ Application url- https://kapilnaik.shinyapps.io/global-biodiversity-kapil/
 
 --Search Functionality: I've added a search functionality that allows users to search for a species either by its vernacular name or scientific name, such as Paris quadrifolia, Anguis fragilis, Polygonatum multiflorum, Asarum europaeum, Euphorbia cyparissias, Solomon's-seal, European Wild Ginger, Cypress Spurge, Marsh-marigold, etc. The occurrence of the species will be visible on the map, and clicking on a marker will display locality and species name details. Users can also view the occurrence timeline in a graph located below the map.
 
---Deployed Application: The dashboard has been deployed on shinyapps.io and is accessible at https://kapilnaik.shinyapps.io/global-biodiversity-kapil/. This allows users to interact with the dashboard directly from the web without the need to run the application locally.
+--Deployed Application: The dashboard has been deployed on shinyapps.io and is accessible at https://kapilnaik.shinyapps.io/Global-biodiversity-Kapil_2/. This allows users to interact with the dashboard directly from the web without the need to run the application locally.
 
 -- Application is decomposed into separate shiny modules - ui.r, server.r, map_ui.r, map_server.r, timeline_ui.r and timeline_server.r.
 
